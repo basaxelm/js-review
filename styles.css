@@ -1,0 +1,402 @@
+*{
+    padding: 0px; /* Conviene especificar estas propiedades siempre */
+    margin: 0px; /* Los navegadores suelen aplicar algo de padding y margin en default */
+}
+
+body{
+    background: rgb(43, 0, 83);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mainhead{
+    display: grid; /* Con esto especificamos que vamos a usar grid-layout para diseñar */
+    grid-template-columns: auto; /* Permite determinar el tamaño de las columnas, y
+    la cantidad de acuerdo a la cantidad de parámetros */
+    grid-template-rows: auto 10% auto 10%; /* Lo mismo que lo anterior, pero aplicado a las filas */
+    grid-template-areas: "header" 
+                         "navmenu"
+                         "midpage"
+                         "footp";
+                         /* Esto permite ubicar los elementos de acuerdo a un nombre.
+                            La cantidad de espacios debe ser igual en todas las líneas.
+                            Se respetará un orden descendente.
+                            Tras esto, se debe aplicar grid-area a los elementos con su correspondiente
+                            nombre. */
+}
+
+header{
+    grid-area: header;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.head{
+    background: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.imgicon{
+    content:url(skyrim/helmeticon.png);
+    max-width: 5%;
+    height: auto;
+}
+
+.head h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    padding-left: 5px;
+    font-size: calc(1em + 2vmin);
+}
+
+.navmenu{
+    grid-area: navmenu;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.navmenu ul{
+    background: black;
+    list-style: none;
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navmenu ul li{
+    padding-left: 10px;
+    text-align: center;
+    flex-basis: 150px;
+}
+
+.navmenu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: calc(0.25em + 2vmin);
+    white-space: nowrap; /* El texto se mantiene en una misma linea, no baja */
+}
+
+.midpage{
+    grid-area: midpage;
+    background: black;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.sidemenu{
+    grid-area: sidemenu;
+    background: rgb(99, 0, 0);
+    padding-left: 10px;
+    padding-top: 20px;
+    color: white;
+    width: 20%;
+    display: grid;
+    grid-template-columns: 90%  ;
+    grid-template-rows: 10% 5% 5% auto ;
+    grid-template-areas: "title"
+                         "input1"
+                         "button1"
+                         "sidemenulinks";
+    row-gap: 10px;
+    order: 2;
+}
+@media (max-device-width: 1140px) { /*max-device-width para responsive mobile device*/
+    .midpage{
+        display: flex;
+        flex-flow: row wrap-reverse;
+        justify-content: center;
+    }
+    .sidemenu{
+        width: 100%;
+        padding-bottom: 10px;
+        grid-template-rows: 25% 15% 15% auto ;
+    }
+    .container1{
+        width:100%;
+        padding-top: 30px;
+    }
+
+    .sidemenulinks{
+        padding-bottom: 60px;
+    }
+}
+@media (max-width: 700px) { /*max-device-width para responsive mobile device*/
+    .midpage{
+        display: flex;
+        flex-flow: row wrap-reverse;
+        justify-content: center;
+    }
+    .sidemenu{
+        width: 100%;
+        padding-bottom: 10px;
+        grid-template-rows: 25% 15% 15% auto ;
+    }
+    .container1{
+        width:100%;
+        padding-top: 30px;
+    }
+    .sidemenulinks{
+        padding-bottom: 60px;
+    }
+}
+
+.sidemenu h2{
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+    grid-area: title;
+    font-size: calc(0.75em + 1vmin);
+}
+
+.inputbar{
+    grid-area: input1;
+}
+
+.button{
+    grid-area: button1;
+}
+
+.sidemenulinks{
+    grid-area: sidemenulinks;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.sidemenulinks a{
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: calc(0.65em + 1vmin);
+}
+
+.container1{
+    background: black;
+    color: white;
+    font-size: calc(0.25em + 2vmin);
+    width: 80%;
+    min-height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    order: 1;
+}
+
+.box1{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 1;
+}
+
+.img1{
+    content:url(skyrim/laberynthia.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box2{
+    background: rgb(65, 65, 65);
+    /* width: 225px; */
+    flex-basis: 225px;    
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 2; /* Especifica el orden en que aparecerá el elemento */
+} 
+
+.img2{
+    content:url(skyrim/valthume.png);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box3{
+    background: rgb(65, 65, 65);
+    white-space: nowrap;
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 3;
+}
+
+.img3{
+    content:url(skyrim/ysgramortumb.png);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box4{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 4;
+}
+
+.img4{
+    content:url(skyrim/ustengrav.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box5{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 5;
+}
+
+.img5{
+    content:url(skyrim/volskygge.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box6{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 6;
+}
+
+.img6{
+    content:url(skyrim/ragnvald.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box7{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 7;
+}
+
+.img7{
+    content:url(skyrim/saarthal.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+.box8{
+    background: rgb(65, 65, 65);
+    /* width: 225px;     */
+    flex-basis: 225px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 8;
+}
+
+.img8{
+    content:url(skyrim/folgunthur.jpg);
+    max-width: 95%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+footer{
+    grid-area: footp;
+    font-size: calc(0.45em + 1vmin);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footp{
+    background: black;
+    color: white;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
