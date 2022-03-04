@@ -100,7 +100,7 @@ header{
     width: 20%;
     display: grid;
     grid-template-columns: 90%  ;
-    grid-template-rows: 10% 5% 5% auto ;
+    grid-template-rows: 8% 5% 5% auto ;
     grid-template-areas: "title"
                          "input1"
                          "button1"
