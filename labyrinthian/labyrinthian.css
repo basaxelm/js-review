@@ -1,6 +1,7 @@
 .container1{
-    background: url(labyrinthianimg/labyrinthianback.jpg);
-    background-size: cover;
+    background: url(labyrinthianimg/labyrinthianback.jpg); /* Se coloca una imagen de fondo */
+    background-size: cover; /* cover permitirá que la imagen se ajuste al tamaño de screen.
+                            Muy bueno para responsive. */
 }
 
 .labyrinthianBox{

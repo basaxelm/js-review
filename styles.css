@@ -13,6 +13,8 @@ body{
     grid-template-columns: auto; /* Permite determinar el tamaño de las columnas, y
     la cantidad de acuerdo a la cantidad de parámetros */
     grid-template-rows: auto 120px auto 120px; /* Lo mismo que lo anterior, pero aplicado a las filas */
+                                               /* Al colocar el tamaño en px, permite un mejor 
+                                               comportamiento responsive */
     grid-template-areas: "header" 
                          "navmenu"
                          "midpage"
@@ -205,6 +207,7 @@ header{
     flex-basis: auto;
     height: auto;
     min-height: 600px;
+    padding: 15px;
 }
 
 .mainBox{
@@ -235,6 +238,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -260,6 +264,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -286,6 +291,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -311,6 +317,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -336,6 +343,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -361,6 +369,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -386,6 +395,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
@@ -411,6 +421,7 @@ header{
     min-height: 200px;
     border-radius: 5px;
     padding: 10px;
+    margin: 10px;
     font-size: calc(0.45em + 2vmin);
     display: flex;
     flex-flow: column nowrap;
