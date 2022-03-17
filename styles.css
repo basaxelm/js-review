@@ -274,7 +274,7 @@ header{
 } 
 
 .img2{
-    content:url(skyrim/valthume.png);
+    content:url(skyrim/valthume.jpg);
     max-width: 95%;
     height: 150px;
     object-fit: cover;
@@ -301,7 +301,7 @@ header{
 }
 
 .img3{
-    content:url(skyrim/ysgramortumb.png);
+    content:url(skyrim/ysgramortomb.jpg);
     max-width: 95%;
     height: 150px;
     object-fit: cover;
